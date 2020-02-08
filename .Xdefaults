@@ -1,0 +1,88 @@
+! urxvt
+
+URxvt*geometry:                80x20
+URxvt*font:                    xft:Terminus:pixelsize=12
+xterm*font:     *-fixed-*-*-*-32-*
+URxvt*depth:                   32
+!URxvt*background:              [85]#000000
+!URxvt*foreground:              [100]#ffffff
+URxvt*borderless:              1
+URxvt*scrollBar:               false
+URxvt*saveLines:               500000
+URxvt*termName:                rxvt-unicode
+URxvt.perl-ext-common:         default,matcher
+URxvt.urlLauncher:             firefox
+URxvt.matcher.button:          1
+
+! special
+*.foreground:   #808080
+*.background:   #252525
+*.cursorColor:  #808080
+
+! black
+!*.color0:       #202020
+!*.color8:       #404040
+!
+!! red
+!*.color1:       #bf3f34
+!*.color9:       #ff6c5f
+!
+!! green
+!*.color2:       #b8ca4b
+!*.color10:      #b8ca4b
+!
+!yellow
+!*.color3:       #bf7a29
+!*.color11:      #c7a551
+!
+!! blue
+!*.color4:       #627a92
+!*.color12:      #95b9de
+!
+!! magenta
+!*.color5:       #75507b
+!*.color13:      #ad7fa8
+!
+!! cyan
+!*.color6:       #757978
+!*.color14:      #9fa590
+!
+!! white
+!*.color7:       #b2a191
+!*.color15:      #e8d0c3
+!
+!!Pnevma1
+!!*color0:  #2F2E2D
+!!*color8:  #4A4845
+!!*color1:  #A36666
+!!*color9:  #D78787
+!!*color2:  #8FA57E
+!!*color10: #A9BA9C
+!!*color3:  #D7AF87
+!!*color11: #E4C9AF
+!!*color4:  #7FA5BD
+!!*color12: #A1BDCE
+!!*color5:  #C79EC4
+!!*color13: #D7BEDA
+!!*color6:  #8ADBB4
+!!*color14: #B1E7DD
+!!*color7:  #D0D0D0
+!!*color15: #EFEFEF
+!
+!!Pnevma2 - A heavy mod of the original.
+!!*color0:  #2F2E2D
+!!*color8:  #4A4845
+!!*color1:  #C37561
+!!*color9:  #D19485
+!!*color2:  #A0A57E
+!!*color10: #B6B99D
+!!*color3:  #D1A375
+!!*color11: #DEBC9C
+!!*color4:  #7985A3
+!!*color12: #98A1B9
+!!*color5:  #AB716D
+!!*color13: #BE918E
+!!*color6:  #98B9B1
+!!*color14: #CBE6CB
+!!*color7:  #D0D0D0
+!!*color15: #EFEFEF
