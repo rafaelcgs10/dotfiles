@@ -1,0 +1,1 @@
+/home/rafael/.emacs.d/straight/repos/auto-highlight-symbol/auto-highlight-symbol.el

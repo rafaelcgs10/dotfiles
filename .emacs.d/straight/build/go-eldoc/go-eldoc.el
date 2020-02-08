@@ -1,0 +1,1 @@
+/home/rafael/.emacs.d/straight/repos/emacs-go-eldoc/go-eldoc.el

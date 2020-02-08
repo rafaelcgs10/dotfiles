@@ -1,0 +1,1 @@
+/home/rafael/.emacs.d/straight/repos/fbthrift/thrift/contrib/thrift.el

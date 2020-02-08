@@ -1,0 +1,1 @@
+/home/rafael/.emacs.d/straight/repos/protobuf/editors/protobuf-mode.el

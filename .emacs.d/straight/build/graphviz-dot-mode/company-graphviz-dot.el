@@ -1,0 +1,1 @@
+/home/rafael/.emacs.d/straight/repos/graphviz-dot-mode/company-graphviz-dot.el

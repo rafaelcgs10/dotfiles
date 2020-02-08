@@ -1,0 +1,168 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/tmp/" . "emacs-configuration/")
+ ("/home/rafael/Documents/Tweet-Hunter/spec/" . "jobs/")
+ ("/home/rafael/Documents/Tweet-Hunter/config/" . "initializers/")
+ ("/home/rafael/Documents/Tweet-Hunter/app/views/" . "hashtags/")
+ ("/home/rafael/Documents/Tweet-Hunter/app/" . "models/")
+ ("/home/rafael/Documents/Tweet-Hunter/" . "app/")
+ ("/home/rafael/Documents/TweetHunter/app/views/" . "hashtags/")
+ ("/home/rafael/Documents/TweetHunter/app/" . "views/")
+ ("/home/rafael/Documents/blog/blog/" . "app/")
+ ("/home/rafael/Documents/blog/" . "blog/")
+ ("/home/rafael/Documents/myapp/" . "app/")
+ ("/home/" . "rafael/")
+ ("/home/rafael/.config/" . "i3/")
+ ("/home/rafael/" . ".config/")
+ ("/home/rafael/Documents/" . "Tweet-Hunter/")
+ ("/home/rafael/Documents/myapp/app/" . "jobs/")
+ ("/home/rafael/Documents/blog/blog/app/views/" . "articles/")
+ ("/home/rafael/Documents/blog/blog/app/" . "views/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/rafael/"
+ "/home/rafael/Documents/"
+ "/home/rafael/.config/i3/"
+ "/home/rafael/Documents/Tweet-Hunter/"
+ "/tmp/emacs-configuration/"
+ "/home/rafael/Documents/Tweet-Hunter/app/controllers/"
+ "/home/rafael/Documents/Tweet-Hunter/app/models/"
+ "/home/rafael/Documents/Tweet-Hunter/config/"
+ "/home/rafael/Documents/Tweet-Hunter/spec/jobs/"
+ "/home/rafael/Documents/Tweet-Hunter/config/initializers/"
+ "/home/rafael/Documents/Tweet-Hunter/app/views/hashtags/"
+ "/home/rafael/Documents/Tweet-Hunter/app/javascript/stylesheets/"
+ "/home/rafael/Documents/blog/blog/app/controllers/"
+ "/home/rafael/Documents/TweetHunter/app/views/hashtags/"
+ "/home/rafael/Documents/blog/blog/app/views/articles/"
+ "/home/rafael/Documents/myapp/app/jobs/"
+ "/home/rafael/Documents/myapp/config/"
+ "/home/rafael/Documents/myapp/"
+ "/home/rafael/Documents/myapp/app/models/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ ".emacs"
+ "config"
+ ".eslintrc"
+ ".rubocop.yml"
+ "init.org"
+ "sorbet_ignore.sh"
+ "application_controller.rb"
+ ".irbrc"
+ "hashtag.rb"
+ "Gemfile.lock"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/rafael/" (24126 62729 416458 578000) ".mkshrc" ".pki/" ".bash_profile" ".config/" ".pvpn-cli/" ".xinitrc" ".zlogin" ".webdrivers/" ".emacs" ".zprofile.zwc.old" "Downloads/" "ruby.sh" ".bashrc" ".bundle/" ".zimrc" ".bash_logout" ".local/" ".xinitrc~" "Desktop/" ".yard/" ".zlogin.zwc.old" "Public/" ".eclipse/" ".gemrc" ".steampath" ".vim/" ".pgpass" ".swt/" "../" "Pictures/" ".ssh/" ".Xauthority" ".steam/" ".grip/" ".zprofile.zwc" ".zshrc.zwc" ".vegas/" "Documents/" ".nvidia-settings-rc" ".nv/" ".zprofile" ".gitignore" "Templates/" ".pgmanage/" ".fontconfig/" "mouse-conf.sh" ".pgadmin/" ".lesshst" ".irb-history" ".dotfiles/" "./" "Music/" ".zshrc.zwc.old" ".pgAdmin4.startup.log" ".gem/" ".zcompdump" ".zsh_history" ".pgAdmin4.14205473332193902643.log" ".npm/" ".gitconfig" ".java/" ".steampid" ".circleci/" "hd/" ".netrc" ".profile" ".gtkrc-2.0" ".zcompdump.zwc" ".gnupg/" ".zlogin.zwc" ".yarn/" ".heidisql/" ".wget-hsts" ".cache/" ".bash_history" ".zdirs" "rvm-install" ".pgAdmin4.14205473332193902643.addr" ".mozilla/" ".solargraph/" ".emacs.d/" ".emacs~" ".zcompdump.zwc.old" "keyboard-conf.sh" ".Xdefaults" ".viminfo" ".irbrc" ".zim/" ".irbrc~" ".yarnrc" "gnome.sh" ".irb_history" ".qmplay2/" ".vimrc" ".zshenv.zwc" ".zcompcache/" ".wine/" ".standard-v14-cache/" ".zshrc" ".psql_history" ".rvm/" ".pulse-cookie" ".zshenv" "Videos/" "configs/")
+
+ ("/home/rafael/Documents/" (24126 62579 962458 596000) "steamgrid/" "scalpel/" "My Collection.bib" "grading system declarations.pdf" "histórico.pdf" "software-foundations/" "E.W. Dijkstra Archive_ On the cruelty of really teaching computing science (EWD 1036).pdf" "nero2.jpeg" "quick.kdenlive" "ES2015/" ".emacs" "package.json" "Anti-Unification-Algorithm/" "udesc_background.pdf" "gamma.hi" "sf/" "Tweet-Hunter/" "projeto fita 1b.kdenlive" "PolyGP/" "#aux.txt#" "carteira_trabalho_rafael-2.jpg" "turing.tex" "UTC--2017-12-19T16-41-26.068Z--aba48906b2942c83e0b69daf1b2e6517b5427d05" "treasy-java-selenide-functional-tests/" "RG-1.jpg" "udesc.sty" "Convocacao_Eleicoes_2019.odt" "gamma.hs" "statman" "src/" "learn_node/" "convite.jpg" "MMo/" "master_thesis.tar.gz" "diploma computação.pdf" "RealTimeChatRails/" "QuickChick/" "rafaelcgs10.github.io/" "RG.jpeg" "div_euclidean/" "financial.pdf" "yarn.lock" "0E3020096B23FEF86AD390943F4191EA_labels.pdf" "project_proposal/" "Proof_CD_VMM/" "carteira_trabalho_rafael-1.jpg" "fractals/" "BOGerado.pdf" "52emycael6641.jpg" "client.ovpn" "mwf_config" "informacoes.txt" "tcc_plano/" "node/" "udesc_logo.eps" "weit_2017_Analise_Sistema_Tipos_Haskell_b.pdf" "master_thesis_bk/" "computacaoquantica/" "rita2018/" "Overwatch/" "manicomio1/" "wall.text" "gamma.o" "UNSW Scholarship Funding Form.pdf" "myvpn.pem" "docs bruno/" "documents_application/" "Top10CC/" "Cartão de embarque _ LATAM Airlines no Brasil.pdf" "aaaa.kdenlive" "edss/" "booksite87-export/" "library.bib" "naoEntendirCategorias.tar.gz" "PauloChallange.glob" "declaracao_rafael.docx" "maddog.sbv" "RG-2.jpg" "emacs-solargraph/" "rita_2018_Analise_Sistema_Tipos_Haskell.pdf" "StarCraft II/" "Elizete Castro Gonçalves Silva Rec.pdf" "certificate_rafael.pdf" "pier5.kdenlive" "colecao.bib" "PauloChallange.v" "node_modules/" "eu_turbo2.jpeg" "seqs/" "statman.o" "My-CV/" "tccudesc.pdf" "contrato.pdf" "statman.hs" "lfa/" "myapp/" "typescript/" "Como começou o universo.pdf" "aniversario marcelo.kdenlive" "maddog_coloquio_legenda/" "lambda_man.jpeg" "Document Submission Guidelines.pdf" "org-life/" "#test.c#" "w_in_coq_bitbucket/" "Superposition_Benchmark_v1.1_2022_1576701152.png" "tcc/" "Type-Assignment/" "cv/" "research_proposal/" "torneio_pratico_opat/" "Convocacao_Eleicoes_2019.pdf" "cpdt.tgz" "comprovante_militar_rafael.jpg" "weit2017/" "blog/" "comentários.md" "bebe/" "cpdt/" "W-in-Coq/" "sample-acmtog.tex" "Elizete Castro Gonçalves Silva Decl.pdf" "rsaincoq/" "sblp-w-in_coq_bk/" "itp-w-in-coq/" "__MACOSX/" "AsusSoundRecorder/" "verde.kdenlive" "prova_coq/" "maddog-20171227T005850Z-001.zip" ".PauloChallange.aux" "wfr.v" "plane_ticket_rafael_castro.pdf" "Template-UDESC-Slide/" "Currículo Lattes.pdf" "Passagem Rafael  Processo de Compra - LAN.com.pdf" "Cartão de embarque _ LATAM Airlines no Brasil 2.pdf" "haha.jpeg" "hbss18/" "Latex-Beamer-UDESC/" "PauloChallange.vo" "ml-in-coq/" "aprendendo-ci/" "crawler/" "Algorithm-W/" "niver marcelo 93.mp4.txt" "coq.png" "unification/" "gamma" "master_thesis/" "docs mae/" "category-theory/" "email moller.txt" "eu_turbo.jpeg" "Analise_Sistema_Tipos_Haskell.zip" "minlog/" "proof_CD_VMM.tar.gz" "udesc_logo.svg" "compra e venda.pdf" "OPAT - Trabalhos.zip" "Bk-W-in-Coq/" "nota.pdf" "sblp-w-in-coq/" "../" "./")
+
+ ("/home/rafael/Documents/Tweet-Hunter/app/javascript/channels/" (24126 62658 86458 587000) "consumer.js" "../" "./" "tweets_channel.js" "index.js" "#tweets_channel.js#")
+
+ ("/home/rafael/Documents/Tweet-Hunter/" (24125 59761 440583 831000) "package.json" "Gemfile.lock" ".bundle/" "Gemfile" "config.ru" "LICENSE" ".ruby-version" "yarn.lock" "Procfile" "../" ".gitignore" "bin/" "config/" ".rubocop.yml" "spec/" ".rubocop_todo.yml" "tmp/" "Rakefile" "storage/" ".eslintrc.json" "./" "vendor/" ".browserslistrc" "lib/" ".git/" "db/" "node_modules/" "app/" "#Rakefile#" ".circleci/" "postcss.config.js" ".log/" "vcr_cassettes/" ".rspec" "cache-circleci/" "package-lock.json" "sorbet/" "babel.config.js" "public/" "coverage/" "README.md" ".solargraph.yml" "log/")
+
+ ("/home/rafael/Documents/rafaelcgs10.github.io/" (24126 53144 102459 722000) "reveal.js/" "coq/" "udesc_background.pdf" ".#index.org" "udesc_logo.png" "coq.md" "udesc.sty" "coq.html" "../" "grupo_logo.png" "artigo.pdf" "style.css" "ETEM.html" "udesc_logo.eps" "./" "eu.jpg" "index.html" "#index.org#" "fractal/" ".git/" "artigo.txt" "index.org" "taticas.html" "ETEM.org" "taticas.org" "coq.org" "jsMath/" "old/" "ETEM.pdf" "udesc_logo.svg" "index.md" "ETEM/")
+
+ ("/home/rafael/.config/i3/" (24126 50391 296460 51000) "config~" "../" "config" "./")
+
+ ("/home/rafael/.config/" (24125 24129 744635 342000) "zshrc" ".mono/" "gtk-2.0/" "GoPro/" "coq/" "configstore/" "autostart/" "gtk-4.0/" "learnyounode/" "user-dirs.locale" "rpcs3/" "goa-1.0/" "menus/" "UNIGINE/" "yelp/" "GIMP/" "jesseduffield/" "Team17 Digital Limited/" "procps/" "discord/" "mpv/" "htop/" "enchant/" "bleachbit/" "gedit/" "../" "QtProject.conf" "systemd/" "Zulip/" "Etherdyne/" "evolution/" "obs-studio/" "dconf/" "pavucontrol.ininr" "nautilus/" "Trolltech.conf" "protonfixes/" "chromium/" "zathura/" "evince/" "Qtwebflix/" "mimeapps.list" "kdenliverc" ".compton.conf.swp" "./" "filezilla/" "okularpartrc" "pulse/" "xfce4/" "Postman/" "neofetch/" "saint.png" "kdeglobals" "i3status/" "Slack/" "lutris/" "whats-app-nativefier-7bbd2c/" "ibus/" "workshopper/" "user-dirs.dirs" "dleyna-renderer-service.conf" "gtk-3.0/" "plex.tv/" "libreoffice/" "gamemode.ini" "Kolor.conf" "smplayer/" "gconf/" "gnome-initial-setup-done" "pavucontrol.ini" "SubDownloader/" "pgManage/" "unity3d/" "okularrc" "nemo/" "Mendeley Ltd./" "dolphin-emu/" "Messenger for Desktop/" "inkscape/" "compton.conf" "matplotlib/" "i3/" "eog/" "antimicro/" "subtitle-master-gui/" "epiphany/" "Code - OSS/" "zdoom/" "cef_user_data/" "vlc/" "gnome-session/" "Thunar/" "hexchat/" "ppsspp/" "LanguageTool/")
+
+ ("/home/rafael/Documents/Tweet-Hunter/config/initializers/" (24125 47952 113938 48000) "twitter.rb" "resque-pool.rb~" "resque-pool.rb" "../" "inflections.rb" "resque.rb" "./" "mime_types.rb" "backtrace_silencers.rb" "application_controller_renderer.rb" "assets.rb" "cookies_serializer.rb" "wrap_parameters.rb" "filter_parameter_logging.rb" "content_security_policy.rb")
+
+ ("/home/rafael/Documents/Tweet-Hunter/config/" (24125 47952 113938 48000) "webpacker.yml" "database.yml" "resque_schedule.yml" "master.key" "storage.yml" "../" "application.yml" "environments/" "cable.yml" "definitions.rb" "application.rb" "puma.rb" "initializers/" "./" "webpack/" "spring.rb" "newrelic.yml" "credentials.yml.enc" "boot.rb" "resque-pool.yml" "locales/" "resque-pool.yml~" "environment.rb" "routes.rb")
+
+ ("/home/rafael/Documents/Tweet-Hunter/app/models/" (24125 47954 483938 178000) "tweet.rb" "#bot.rb#" "../" "./" "application_record.rb" "hashtag.rb" "concerns/")
+
+ ("/home/rafael/Documents/Tweet-Hunter/app/controllers/" (24125 26873 948785 407000) "../" "application_controller.rb" "hashtags_controller.rb" "tweets_controller.rb" "./" "#hashtags_controller.rb#" "concerns/")
+
+ ("/tmp/emacs-configuration/" (24125 28875 320894 850000) ".git/" ".gitignore" "README.org" "custom.el" "init.org" "straight/" "init.md" "init.el" "../" "./")
+
+ ("/home/rafael/Documents/Tweet-Hunter/.circleci/" (24125 47954 481938 177000) "config.yml" "../" "./")
+
+ ("/home/rafael/Documents/Tweet-Hunter/spec/jobs/" (24125 32848 167112 102000) "tweet_search_job_spec.rb" "../" "./")
+
+ ("/home/rafael/Documents/Tweet-Hunter/spec/models/" (24125 26053 946740 566000) "tweet_spec.rb" "../" "./" "#hashtag_spec.rb#" "hashtag_spec.rb")
+
+ ("/tmp/" (24125 28787 442890 45000) ".X11-unix/" ".ICE-unix/" ".XIM-unix/" ".font-unix/" ".Test-unix/" "systemd-private-ba52abb5e38a4a3cb6c12dc3e865caea-systemd-logind.service-IIlgqi/" "misses.chromium.1000.openfiles-180MB.txt" "systemd-private-ba52abb5e38a4a3cb6c12dc3e865caea-postgresql.service-9lxVhi/" "systemd-private-ba52abb5e38a4a3cb6c12dc3e865caea-redis.service-SYESTh/" "systemd-private-ba52abb5e38a4a3cb6c12dc3e865caea-colord.service-NalBzh/" "misses.nautilus.1000.openfiles-105MB.txt" "misses.pavucontrol.1000.openfiles-105MB.txt" "misses.xterm.1000.openfiles-17MB.txt" "enabled.txt" "preloadlist.txt" "serverauth.wBUw4H1CKX" ".X0-lock" "dumps/" ".org.chromium.Chromium.OnXc3D/" "systemd-private-ba52abb5e38a4a3cb6c12dc3e865caea-upower.service-s5uDRf/" "steam_chrome_shmem_uid1000_spid1976" "enabled.prec.txt" "flycheck_.emacsRzkV9E" "8da57aac580ce50dfc5846ab854de39b/" "flycheck_.emacslvgGvj" "646e25ca" "d20200207-12995-1p5s11e/" "d20200207-13147-hx2fej/" "d20200207-13221-gzttee/" "d20200207-13324-1m236ho/" "d20200207-13373-z6m2we/" "d20200207-13558-b8zogd/" "emacs-configuration/" "flycheck_.emacsgQGpji" "babel-BZxX0E/" "../" "./")
+
+ ("/home/rafael/Documents/Tweet-Hunter/app/javascript/stylesheets/" (24123 4784 434813 35000) "../" "darkly.css" "./" "application.scss")
+
+ ("/home/rafael/Documents/Tweet-Hunter/app/views/hashtags/" (24123 4784 432813 35000) "new.html.erb" "../" "./" "index.html.erb" "_hashtag.html.erb" "show.html.erb")
+
+ ("/home/rafael/Documents/Tweet-Hunter/app/javascript/" (24115 33683 968668 139000) "stylesheets/" "../" "packs/" "./" "channels/")
+
+ ("/home/rafael/Documents/Tweet-Hunter/app/jobs/" (24124 59359 825082 271000) "delete_tweets_job.rb" "../" ".#store_tweet_job.rb" "./" "application_job.rb" "store_tweet_job.rb" "delete_old_tweets_job.rb" "tweet_search_job.rb")
+
+ ("/home/rafael/.rvm/gems/ruby-2.6.0/gems/treetop-1.6.10/lib/treetop/compiler/" (24122 58896 664814 398000) "grammar_compiler.rb" "../" "ruby_builder.rb" "node_classes/" "./" "lexical_address_space.rb" "node_classes.rb" "metagrammar.treetop" "metagrammar.rb")
+
+ ("/home/rafael/Documents/Tweet-Hunter/spec/" (24124 28858 754537 828000) "fixtures/" "../" "models/" "spec_helper.rb" "./" "utils/" "features/" "rails_helper.rb" "jobs/")
+
+ ("/home/rafael/Documents/Tweet-Hunter/app/" (24122 4278 412077 736000) "helpers/" "../" "models/" "./" "utils/" "channels/" "controllers/" "assets/" "jobs/" "javascript/" "views/")
+
+ ("/home/rafael/Documents/Tweet-Hunter/spec/controllers/" (24116 18145 655077 886000) "hashtags_controller_spec.rb" "../" "./" "tweets_controller_spec.rb")
+
+ ("/home/rafael/Documents/Tweet-Hunter/app/javascript/packs/" (24122 1415 602283 689000) "stylesheets.scss~" "../" "./" "application.js")
+
+ ("/home/rafael/Documents/Tweet-Hunter/app/views/" (24111 16370 170680 59000) "../" "layouts/" "./" "hashtags/" "tweets/")
+
+ ("/home/rafael/Documents/Tweet-Hunter/app/views/tweets/" (24121 30412 102912 376000) "_tweet.html.erb" "../" "./")
+
+ ("/home/rafael/Documents/TweetHunter/app/views/hashtags/" (24111 14750 182680 252000) "new.html.erb" "../" "./" "new.html.erb~" "index.html.erb" "index.html.erb~")
+
+ ("/home/rafael/Documents/TweetHunter/app/views/" (24111 338 698681 972000) "../" "layouts/" "./" "hashtags/")
+
+ ("/home/rafael/Documents/TweetHunter/app/controllers/" (24111 14821 186680 244000) "../" "hashtags_controller.rb~" "application_controller.rb" "hashtags_controller.rb" "./" "concerns/")
+
+ ("/home/rafael/Documents/blog/blog/app/views/" (24105 64329 154994 975000) "welcome/" "../" "layouts/" "./" "comments/" "articles/")
+
+ ("/home/rafael/Documents/blog/blog/" (24105 51379 376996 520000) "package.json" "Gemfile.lock" "Gemfile" "config.ru" ".ruby-version" "yarn.lock" "../" ".gitignore" "bin/" "config/" "tmp/" "Rakefile" "storage/" "./" "vendor/" ".browserslistrc" "lib/" ".git/" "db/" "node_modules/" "app/" "postcss.config.js" "babel.config.js" "test/" "public/" "README.md" ".solargraph.yml" "log/")
+
+ ("/home/rafael/.config/whats-app-nativefier-7bbd2c/" (24064 58791 333900 916000) "Service Worker/" "File System/" "../" "Cookies-journal" "./" "Cache/" "Cookies" "window-state.json" "QuotaManager" "Preferences" "GPUCache/" "blob_storage/" "QuotaManager-journal" "IndexedDB/" "databases/" "Local Storage/")
+
+ ("/home/rafael/Documents/myapp/" (24110 64315 832682 158000) "../" ".gitignore" "tmp/" "./")
+
+ ("/home/rafael/Documents/blog/" (24103 20222 636221 986000) "../" "./" "blog/")
+
+ ("/home/rafael/Documents/TweetHunter/" (24110 64810 162682 99000) "package.json" "Gemfile.lock" "Gemfile" "config.ru" ".ruby-version" "yarn.lock" "Procfile" "../" ".gitignore" "bin/" "config/" "tmp/" "Rakefile" "storage/" "./" "vendor/" ".browserslistrc" "lib/" ".git/" "db/" "node_modules/" "Procfile~" "app/" "#Rakefile#" "postcss.config.js" "babel.config.js" "test/" "public/" "README.md" ".solargraph.yml" "log/")
+
+ ("/home/rafael/Documents/TweetHunter/app/" (24108 44719 725056 780000) "helpers/" "../" "models/" "./" "channels/" "controllers/" "assets/" "jobs/" "javascript/" "views/" "mailers/")
+
+ ("/home/rafael/Documents/TweetHunter/app/models/" (24111 767 720681 921000) "tweet.rb" "#bot.rb#" "../" "bot.rb~" "./" "application_record.rb" "hashtag.rb" "concerns/" "tweet.rb~")
+
+ ("/home/rafael/Documents/myapp/config/" (24109 58963 845864 273000) "routes.rb~" "webpacker.yml" "application.yml~" "initializers.rb~" "database.yml~" "database.yml" "resque_schedule.yml" "master.key" "storage.yml" "../" "application.yml" "environments/" "cable.yml" "definitions.rb" "application.rb" "puma.rb" "initializers/" "./" "webpack/" "spring.rb" "credentials.yml.enc" "boot.rb" "locales/" "environment.rb" "resque_schedule.yml~" "routes.rb")
+
+ ("/home/rafael/Documents/myapp/app/jobs/" (24110 8303 484794 106000) "../" "tweet_search_job.rb~" "./" "application_job.rb" "tweet_search_job.rb")
+
+ ("/home/" (24064 57567 337256 257000) "../" "./" "rafael/")
+
+ ("/home/rafael/.emacs.d/" (24110 11190 472586 413000) "auto-save-list/" "network-security.data" "../" "recentf" ".lsp-session-v1" "recentf~" "./" "places" "ido.last~" "lisp/" "snippets/" "ido.last" "transient/" ".cache/" "plugins/" "elpa/" "url/")
+
+ ("/home/rafael/.emacs.d/auto-save-list/" (24110 61359 398682 511000) "../" ".saves-33398-rafaeldesk~" ".saves-77931-rafaeldesk~" ".saves-6409-rafaeldesk~" ".saves-25919-rafaeldesk~" ".saves-1256-rafaeldesk~" "./" ".saves-4030-rafaeldesk~")
+
+ ("/home/rafael/Documents/blog/blog/app/controllers/" (24106 73 528994 822000) "../" "application_controller.rb" "comments_controller.rb" "./" "articles_controller.rb" "comments_controller.rb~" "welcome_controller.rb" "articles_controller.rb~" "concerns/")
+
+ ("/home/rafael/Documents/blog/blog/app/views/articles/" (24106 809 728994 734000) "new.html.erb" "../" "./" "_form.html.erb" "new.html.erb~" "index.html.erb" "edit.html.erb~" "show.html.erb" "edit.html.erb" "index.html.erb~")
+
+ ("/home/rafael/Documents/myapp/app/models/" (24108 41129 773057 208000) "tweet.rb" "#bot.rb#" "../" "bot.rb~" "./" "application_record.rb" "concerns/" "tweet.rb~")
+
+ ("/home/rafael/Documents/myapp/app/" (24108 44719 725056 780000) "helpers/" "../" "models/" "./" "channels/" "controllers/" "assets/" "jobs/" "javascript/" "views/" "mailers/")
+
+ ("/home/rafael/Documents/myapp/app/controllers/" (24108 22260 160497 403000) "../" "application_controller.rb" "./" "welcome_controller.rb" "concerns/")
+
+ ("/home/rafael/Documents/PolyGP/" (23923 61961 827857 0) "Unify.o" "Local.hi" "Evolve.o" "Create.o" "Unify.hs" "Auxil.o" "../" "Evolve.hs" "Auxil.hs" "Create.hi" "Local.hs" "./" "Header.o" "Para" "Main.hs" "Evolve.hi" ".git/" "Eval.o" "Eval.hs" ".Evolve.hs.swp" "Auxil.hi" ".Main.hs.swp" "Unify.hi" "Main" "Eval.hi" "Local.o" "Header.hs" "Create.hs" "Header.hi")
+
+ ("/home/rafael/Documents/myapp/config/initializers/" (24107 32092 40840 603000) "twitter.rb" "../" "inflections.rb" "./" "mime_types.rb" "backtrace_silencers.rb" "application_controller_renderer.rb" "assets.rb" "cookies_serializer.rb" "wrap_parameters.rb" "filter_parameter_logging.rb" "twitter.rb~" "content_security_policy.rb")
+
+ ("/home/rafael/Documents/blog/blog/app/" (24103 20222 660221 987000) "helpers/" "../" "models/" "./" "channels/" "controllers/" "assets/" "jobs/" "javascript/" "views/" "mailers/")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
