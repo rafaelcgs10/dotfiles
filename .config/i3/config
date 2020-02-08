@@ -157,7 +157,7 @@ assign [class="discord"] 5
 assign [class="whats-app-nativefier-7bbd2c"] 5
 assign [class="TelegramDesktop"] 5
 assign [class="Messenger for Desktop"] 5
-assign [class="^Chromium$"] 1
+assign [class="^Brave-browser$"] 1
 assign [class="^plexmediaplayer$"] 9
 
 for_window [class="^steam$"] move down 10px, move left 3px
@@ -230,7 +230,7 @@ exec --no-startup-id  ~/keyboard-conf.sh
 exec --no-startup-id  ~/mouse-conf.sh
 exec --no-startup-id  ~/gnome.sh
 exec --no-startup-id  xrdb .Xdefaults
-exec --no-startup-id  chromium
+exec --no-startup-id  brave
 exec --no-startup-id  nautilus
 exec --no-startup-id  steam
 exec --no-startup-id  glipper 
