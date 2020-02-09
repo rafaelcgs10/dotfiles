@@ -28,6 +28,7 @@
  '(custom-enabled-themes (quote (zenburn)))
  '(dynamic-completion-mode t)
  '(ediff-window-setup-function (quote ediff-setup-windows-plain))
+ '(fancy-splash-image "~/.emacs.d/saint.png")
  '(fci-rule-color "#383838")
  '(flycheck-javascript-eslint-executable nil)
  '(flymake-gui-warnings-enabled nil)
@@ -406,3 +407,5 @@
                                           "*run*"
                                           "*shell*"
                                           "*undo-tree*"))
+
+(setq org-html-htmlize-output-type 'css)
