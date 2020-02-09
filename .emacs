@@ -63,7 +63,7 @@
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(package-selected-packages
    (quote
-    (zenburn-theme web-mode ac-inf-ruby rspec-mode yasnippet-snippets ruby-block ruby-extra-highlight inf-ruby rvm robe impatient-mode lsp-treemacs treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile rubocop flycheck lsp-ui rinari indium smooth-scroll company-auctex auctex dante ghc ghc-imported-from haskell-mode htmlize org-tree-slide epresent minimap rainbow-delimiters airline-themes powerline powerline-evil evil langtool magit latex-unicode-math-mode latex-math-preview ac-math latex-extra latex-preview-pane latex-pretty-symbols auctex-latexmk goose-theme company-coq)))
+    (evil-magit zenburn-theme web-mode ac-inf-ruby rspec-mode yasnippet-snippets ruby-block ruby-extra-highlight inf-ruby rvm robe impatient-mode lsp-treemacs treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile rubocop flycheck lsp-ui rinari indium smooth-scroll company-auctex auctex dante ghc ghc-imported-from haskell-mode htmlize org-tree-slide epresent minimap rainbow-delimiters airline-themes powerline powerline-evil evil langtool magit latex-unicode-math-mode latex-math-preview ac-math latex-extra latex-preview-pane latex-pretty-symbols auctex-latexmk goose-theme company-coq)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(robe-completing-read-func (quote ido-completing-read))
  '(ruby-flymake-use-rubocop-if-available nil)
@@ -350,7 +350,7 @@
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
-(global-set-key "\C-x\ k" 'kill-buffer)
+(global-set-key "\C-c\ k" 'kill-buffer)
 
 (setq ruby-insert-encoding-magic-comment nil)
 
@@ -376,3 +376,6 @@
     (when (and eslint (file-executable-p eslint))
       (setq-local flycheck-javascript-eslint-executable eslint))))
 (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
+
+(setq evil-magit-state 'motion)
+(require 'evil-magit)
