@@ -27,7 +27,9 @@
  '(company-quickhelp-color-foreground "#DCDCCC")
  '(custom-enabled-themes (quote (zenburn)))
  '(dynamic-completion-mode t)
+ '(ediff-window-setup-function (quote ediff-setup-windows-plain))
  '(fci-rule-color "#383838")
+ '(flycheck-javascript-eslint-executable nil)
  '(flymake-gui-warnings-enabled nil)
  '(flymake-start-on-flymake-mode nil)
  '(global-robe-mode t)
@@ -63,7 +65,7 @@
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(package-selected-packages
    (quote
-    (evil-magit zenburn-theme web-mode ac-inf-ruby rspec-mode yasnippet-snippets ruby-block ruby-extra-highlight inf-ruby rvm robe impatient-mode lsp-treemacs treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile rubocop flycheck lsp-ui rinari indium smooth-scroll company-auctex auctex dante ghc ghc-imported-from haskell-mode htmlize org-tree-slide epresent minimap rainbow-delimiters airline-themes powerline powerline-evil evil langtool magit latex-unicode-math-mode latex-math-preview ac-math latex-extra latex-preview-pane latex-pretty-symbols auctex-latexmk goose-theme company-coq)))
+    (vc-msg line-reminder centered-window eslintd-fix evil-magit zenburn-theme web-mode ac-inf-ruby rspec-mode yasnippet-snippets ruby-block ruby-extra-highlight inf-ruby rvm robe impatient-mode lsp-treemacs treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile rubocop flycheck lsp-ui rinari indium smooth-scroll company-auctex auctex dante ghc ghc-imported-from haskell-mode htmlize org-tree-slide epresent minimap rainbow-delimiters airline-themes powerline powerline-evil evil langtool magit latex-unicode-math-mode latex-math-preview ac-math latex-extra latex-preview-pane latex-pretty-symbols auctex-latexmk goose-theme company-coq)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(robe-completing-read-func (quote ido-completing-read))
  '(ruby-flymake-use-rubocop-if-available nil)
@@ -358,12 +360,6 @@
 
 (global-visual-line-mode 1)
 
-(setq-default flycheck-disabled-checkers
-  (append flycheck-disabled-checkers
-    '(javascript-jshint)))
-
-(flycheck-add-mode 'javascript-eslint 'web-mode)
-
 ;; use local eslint from node_modules before global
 ;; http://emacs.stackexchange.com/questions/21205/flycheck-with-file-relative-eslint-executable
 (defun my/use-eslint-from-node-modules ()
@@ -377,5 +373,36 @@
       (setq-local flycheck-javascript-eslint-executable eslint))))
 (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
 
+;; disable jshint since we prefer eslint checking
+(setq-default flycheck-disabled-checkers
+  (append flycheck-disabled-checkers
+    '(javascript-jshint lsp-ui)))
+
+(flycheck-add-mode 'javascript-eslint 'web-mode)
+
 (setq evil-magit-state 'motion)
 (require 'evil-magit)
+
+(setq redisplay-dont-pause t
+  scroll-margin 1
+  scroll-step 2
+  scroll-conservatively 10000
+  scroll-preserve-screen-position 1)
+
+(setq-default indent-tabs-mode nil)
+
+(centered-window-mode t)
+
+(setq line-reminder-ignore-buffer-names '("*Backtrace*"
+                                          "*Buffer List*"
+                                          "*Checkdoc Status*"
+                                          "*Echo Area"
+                                          "*helm"
+                                          "*Help*"
+                                          "*Treemacs-*"
+                                          "magit"
+                                          "*Minibuf-"
+                                          "*Packages*"
+                                          "*run*"
+                                          "*shell*"
+                                          "*undo-tree*"))
