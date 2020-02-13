@@ -96,6 +96,8 @@ focus_on_window_activation urgent
 
 no_focus [window_role="pop-up"]
 
+for_window [class="^steam$" title="^Steam$"] focus
+
 workspace 1 output HDMI-0
 workspace 2 output HDMI-0
 workspace 3 output HDMI-0
@@ -233,7 +235,7 @@ exec --no-startup-id  xrdb .Xdefaults
 exec --no-startup-id  brave
 exec --no-startup-id  nautilus
 exec --no-startup-id  steam
-exec --no-startup-id  glipper 
+exec --no-startup-id  qlipper 
 #exec --no-startup-id  blueman-applet
 #exec --no-startup-id  plexmediaplayer
 exec --no-startup-id  telegram-desktop
