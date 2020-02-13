@@ -3841,3 +3841,4 @@ export RUBYOPT=''
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
+# export LANG=zh_CN.UTF-8
