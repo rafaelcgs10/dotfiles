@@ -409,3 +409,18 @@
                                           "*undo-tree*"))
 
 (setq org-html-htmlize-output-type 'css)
+
+
+(use-package eaf
+  :load-path "~/.emacs.d/site-lisp/emacs-application-framework"
+  :custom
+  (eaf-find-alternate-file-in-dired t)
+  :config
+  (eaf-bind-key scroll_up "RET" eaf-pdf-viewer-keybinding)
+  (eaf-bind-key scroll_down_page "DEL" eaf-pdf-viewer-keybinding)
+  (eaf-bind-key scroll_up "C-n" eaf-pdf-viewer-keybinding)
+  (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding))
+
+(require 'eaf)
+
+(eaf-bind-key clear_focus "C-f" eaf-browser-keybinding)
