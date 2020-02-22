@@ -237,6 +237,7 @@ exec --no-startup-id  nautilus
 exec --no-startup-id  steam
 exec --no-startup-id  qlipper 
 exec --no-startup-id  spectacle -s -a
+exec --no-startup-id  ~/nfan.sh
 #exec --no-startup-id  blueman-applet
 #exec --no-startup-id  plexmediaplayer
 exec --no-startup-id  telegram-desktop
