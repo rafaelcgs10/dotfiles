@@ -66,7 +66,7 @@
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(package-selected-packages
    (quote
-    (company-quickhelp auto-complete-clang ac-clang ac-c-headers company-c-headers cpp-auto-include auto-complete-c-headers flymake-google-cpplint google-c-style c-eldoc rtags sclang-snippets vc-msg line-reminder centered-window eslintd-fix evil-magit zenburn-theme web-mode ac-inf-ruby rspec-mode yasnippet-snippets ruby-block ruby-extra-highlight inf-ruby rvm robe impatient-mode lsp-treemacs treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile rubocop flycheck lsp-ui rinari indium smooth-scroll company-auctex auctex dante ghc ghc-imported-from haskell-mode htmlize org-tree-slide epresent minimap rainbow-delimiters airline-themes powerline powerline-evil evil langtool magit latex-unicode-math-mode latex-math-preview ac-math latex-extra latex-preview-pane latex-pretty-symbols auctex-latexmk goose-theme company-coq)))
+    (format-all company-quickhelp ac-clang ac-c-headers company-c-headers cpp-auto-include flymake-google-cpplint google-c-style c-eldoc rtags sclang-snippets vc-msg line-reminder centered-window eslintd-fix evil-magit zenburn-theme web-mode ac-inf-ruby rspec-mode yasnippet-snippets ruby-block ruby-extra-highlight inf-ruby rvm robe impatient-mode lsp-treemacs treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile rubocop flycheck lsp-ui rinari indium smooth-scroll company-auctex auctex dante ghc ghc-imported-from haskell-mode htmlize org-tree-slide epresent minimap rainbow-delimiters airline-themes powerline powerline-evil evil langtool magit latex-unicode-math-mode latex-math-preview ac-math latex-extra latex-preview-pane latex-pretty-symbols auctex-latexmk goose-theme company-coq)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(robe-completing-read-func (quote ido-completing-read))
  '(ruby-flymake-use-rubocop-if-available nil)
@@ -425,34 +425,17 @@
 
 (eaf-bind-key clear_focus "C-f" eaf-browser-keybinding)
 
-(require 'cc-mode)
-(setq-default c-default-style "linux")
-(setq-default c-basic-offset 4)
-
-(defun my-c-mode-common-hook ()
- (c-set-offset 'substatement-open 0)
-
- (setq c++-tab-always-indent t)
- (setq c-basic-offset 4)                  ;; Default is 2
- (setq c-indent-level 4)                  ;; Default is 2
-
- (setq tab-stop-list '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60))
- (setq tab-width 4)
- (setq indent-tabs-mode t)  ; use spaces only if nil
- )
-
-(add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
-
-(use-package lsp-mode :commands lsp)
 (use-package lsp-ui :commands lsp-ui-mode)
 (use-package company-lsp :commands company-lsp)
 
 (use-package ccls
-  :hook ((c-mode c++-mode objc-mode cuda-mode) .
+  :ensure t
+  :config
+  (setq ccls-executable "ccls")
+  (setq lsp-prefer-flymake nil)
+  (setq-default flycheck-disabled-checkers '(c/c++-clang c/c++-cppcheck c/c++-gcc))
+  :hook ((c-mode c++-mode objc-mode) .
          (lambda () (require 'ccls) (lsp))))
-
-(setq ccls-executable "/usr/bin/ccls")
-(setq ccls-initialization-options '(:index (:comments 2) :completion (:detailedLabel t)))
 
 (add-hook 'c-mode-hook
           (lambda ()
@@ -461,3 +444,14 @@
 
 
 (company-quickhelp-mode)
+
+(setq company-lsp-enable-snippet nil)
+
+(require 'google-c-style)
+(defun my-c-mode-hook ()
+  (google-set-c-style)
+  (setq c-basic-offset 4 
+        indent-tabs-mode t 
+        default-tab-width 4))
+(add-hook 'c-mode-hook 'my-c-mode-hook)
+(add-hook 'c++-mode-hook 'my-c-mode-hook)
