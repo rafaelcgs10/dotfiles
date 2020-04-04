@@ -151,6 +151,8 @@ assign [title="^team Keyboard$"] 10
 assign [class="^team$"] 10
 assign [class="^steam$"] 10
 assign [class="^nautilus$"] 6
+assign [class="nautilus"] 6
+assign [class="Nautilus"] 6
 assign [class="^emacs$"] 2
 assign [class="^Emacs$"] 2
 assign [class="^Org.gnome.Nautilus$"] 6
@@ -158,6 +160,8 @@ assign [class="Steam$"] 10
 assign [class="discord"] 5
 assign [class="whats-app-nativefier-7bbd2c"] 5
 assign [class="TelegramDesktop"] 5
+assign [class="Slack"] 5
+assign [class="^Slack$"] 5
 assign [class="Messenger for Desktop"] 5
 assign [class="^Brave-browser$"] 1
 assign [class="^plexmediaplayer$"] 9
@@ -228,24 +232,34 @@ for_window [class="^steam*"] border none
 smart_borders on
 
 
-exec --no-startup-id  ~/keyboard-conf.sh
+#exec --no-startup-id  ~/keyboard-conf.sh
 exec --no-startup-id  ~/mouse-conf.sh
 exec --no-startup-id  ~/gnome.sh
 exec --no-startup-id  xrdb .Xdefaults
-exec --no-startup-id  brave
-exec --no-startup-id  nautilus
-exec --no-startup-id  steam
+exec --no-startup-id  brave-browser
+#exec --no-startup-id  nautilus
+#exec --no-startup-id  steam
 exec --no-startup-id  qlipper 
-exec --no-startup-id  spectacle -s -a
+exec --no-startup-id  nm-applet 
+exec --no-startup-id  volumeicon 
 exec --no-startup-id  ~/nfan.sh
 #exec --no-startup-id  blueman-applet
 #exec --no-startup-id  plexmediaplayer
 exec --no-startup-id  telegram-desktop
+exec --no-startup-id  slack
 #exec --no-startup-id  messengerfordesktop
 #exec --no-startup-id  dropbox
-#exec --no-startup-id compton -CGb
+#exec --no-startup-id compton -b
 exec --no-startup-id hsetroot -solid "#000000"
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id autorandr
 #exec --no-startup-id  ~/whats.sh &
 #exec --no-startup-id  ~/mouse-conf.sh  &
-exec emacs
+exec emacs26
+#exec --no-startup-id obs --startreplaybuffer parameter
+
+# i3lock
+bindsym $mod+Shift+p exec i3lock -c 000000
+
+# Spectacle
+bindsym $mod+p exec flameshot gui

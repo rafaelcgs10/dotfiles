@@ -31,18 +31,22 @@
  '(fancy-splash-image "~/.emacs.d/saint.png")
  '(fci-rule-color "#383838")
  '(flycheck-javascript-eslint-executable nil)
+ '(flycheck-rubocop-lint-only nil)
+ '(flycheck-ruby-rubocop-executable nil)
  '(flymake-gui-warnings-enabled nil)
  '(flymake-start-on-flymake-mode nil)
  '(global-robe-mode t)
- '(inf-ruby-default-implementation "pry")
+ '(inf-ruby-default-implementation "ruby")
  '(inhibit-startup-screen t)
  '(js-chain-indent t)
  '(js-indent-level 2)
  '(lsp-auto-guess-root nil)
  '(lsp-document-sync-method nil)
  '(lsp-lens-auto-enable nil)
- '(lsp-prefer-flymake nil)
+ '(lsp-prefer-flymake nil t)
  '(lsp-solargraph-autoformat t)
+ '(lsp-solargraph-log-level "debug")
+ '(lsp-solargraph-use-bundler nil)
  '(lsp-ui-doc-alignment (quote frame))
  '(lsp-ui-doc-delay 0.1)
  '(lsp-ui-doc-enable t)
@@ -52,12 +56,13 @@
  '(lsp-ui-doc-max-width 80)
  '(lsp-ui-doc-position (quote bottom))
  '(lsp-ui-doc-use-childframe t)
- '(lsp-ui-doc-use-webkit t)
+ '(lsp-ui-doc-use-webkit nil)
  '(lsp-ui-flycheck-enable t)
  '(lsp-ui-flycheck-list-position (quote right))
  '(lsp-ui-imenu-enable t)
  '(lsp-ui-peek-always-show t)
  '(lsp-ui-peek-enable t)
+ '(lsp-ui-sideline-enable nil)
  '(minimap-major-modes (quote (prog-mode latex-mode)))
  '(minimap-minimum-width 15)
  '(minimap-width-fraction 0.01)
@@ -66,10 +71,19 @@
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(package-selected-packages
    (quote
-    (format-all company-quickhelp ac-clang ac-c-headers company-c-headers cpp-auto-include flymake-google-cpplint google-c-style c-eldoc rtags sclang-snippets vc-msg line-reminder centered-window eslintd-fix evil-magit zenburn-theme web-mode ac-inf-ruby rspec-mode yasnippet-snippets ruby-block ruby-extra-highlight inf-ruby rvm robe impatient-mode lsp-treemacs treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile rubocop flycheck lsp-ui rinari indium smooth-scroll company-auctex auctex dante ghc ghc-imported-from haskell-mode htmlize org-tree-slide epresent minimap rainbow-delimiters airline-themes powerline powerline-evil evil langtool magit latex-unicode-math-mode latex-math-preview ac-math latex-extra latex-preview-pane latex-pretty-symbols auctex-latexmk goose-theme company-coq)))
+    (docker-compose-mode mo-git-blame go-mode rubocop helm-ag helm-projectile helm lsp-treemacs proof-general auto-complete ccls company-inf-ruby company-lsp company-math dash projectile treemacs-projectile treemacs-persp treemacs-magit treemacs-icons-dired treemacs-evil evil-magit lsp-ui lsp-mode eslint-fix format-all company-quickhelp ac-clang ac-c-headers company-c-headers cpp-auto-include flymake-google-cpplint google-c-style c-eldoc rtags sclang-snippets vc-msg line-reminder eslintd-fix zenburn-theme web-mode ac-inf-ruby rspec-mode yasnippet-snippets ruby-block ruby-extra-highlight inf-ruby rvm robe impatient-mode flycheck rinari indium smooth-scroll company-auctex auctex dante ghc ghc-imported-from haskell-mode org-tree-slide epresent minimap rainbow-delimiters airline-themes powerline powerline-evil langtool magit latex-unicode-math-mode latex-math-preview ac-math latex-extra latex-preview-pane latex-pretty-symbols auctex-latexmk goose-theme company-coq)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(robe-completing-read-func (quote ido-completing-read))
- '(ruby-flymake-use-rubocop-if-available nil)
+ '(ruby-flymake-use-rubocop-if-available t)
+ '(ruby-insert-encoding-magic-comment nil)
+ '(safe-local-variable-values
+   (quote
+    ((flycheck-checker . rubocop)
+     (ruby-compilation-executable . "ruby")
+     (ruby-compilation-executable . "ruby1.8")
+     (ruby-compilation-executable . "ruby1.9")
+     (ruby-compilation-executable . "rbx")
+     (ruby-compilation-executable . "jruby"))))
  '(save-place-mode t)
  '(show-paren-mode t)
  '(tool-bar-mode nil)
@@ -102,7 +116,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(lsp-ui-doc-background ((t (:background "gray13"))))
+ '(lsp-ui-doc-background ((t (:background "dim gray"))))
  '(lsp-ui-doc-header ((t (:background "gray12" :foreground "white"))))
  '(minimap-active-region-background ((t (:background "slate gray")))))
 ;; Load company-coq when opening Coq files
@@ -223,6 +237,8 @@
 (add-hook 'after-init-hook 'global-company-mode)
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
+
+(require 'rubocop)
 
 (add-hook 'ruby-mode-hook 'flycheck-mode)
 
@@ -392,7 +408,7 @@
 
 (setq-default indent-tabs-mode nil)
 
-(centered-window-mode t)
+;; (centered-window-mode t)
 
 (setq line-reminder-ignore-buffer-names '("*Backtrace*"
                                           "*Buffer List*"
@@ -411,19 +427,19 @@
 (setq org-html-htmlize-output-type 'css)
 
 
-(use-package eaf
-  :load-path "~/.emacs.d/site-lisp/emacs-application-framework"
-  :custom
-  (eaf-find-alternate-file-in-dired t)
-  :config
-  (eaf-bind-key scroll_up "RET" eaf-pdf-viewer-keybinding)
-  (eaf-bind-key scroll_down_page "DEL" eaf-pdf-viewer-keybinding)
-  (eaf-bind-key scroll_up "C-n" eaf-pdf-viewer-keybinding)
-  (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding))
+;; (use-package eaf
+;;   :load-path "~/.emacs.d/site-lisp/emacs-application-framework"
+;;   :custom
+;;   (eaf-find-alternate-file-in-dired t)
+;;   :config
+;;   (eaf-bind-key scroll_up "RET" eaf-pdf-viewer-keybinding)
+;;   (eaf-bind-key scroll_down_page "DEL" eaf-pdf-viewer-keybinding)
+;;   (eaf-bind-key scroll_up "C-n" eaf-pdf-viewer-keybinding)
+;;   (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding))
 
-(require 'eaf)
+;; (require 'eaf)
 
-(eaf-bind-key clear_focus "C-f" eaf-browser-keybinding)
+;; (eaf-bind-key clear_focus "C-f" eaf-browser-keybinding)
 
 (use-package lsp-ui :commands lsp-ui-mode)
 (use-package company-lsp :commands company-lsp)
@@ -455,3 +471,163 @@
         default-tab-width 4))
 (add-hook 'c-mode-hook 'my-c-mode-hook)
 (add-hook 'c++-mode-hook 'my-c-mode-hook)
+
+(require 'helm)
+(require 'helm-config)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(helm-autoresize-mode 1)
+(helm-mode 1)
+
+(require 'helm-projectile)
+(helm-projectile-on)
+
+
+(setq flycheck-ruby-rubocop-executable "rubocop")
+
+(add-hook 'ruby-mode-hook (lambda () (flycheck-mode 1) (setq flycheck-checker 'ruby-rubocop)))
+
+(require 'rspec-mode)
+
+(eval-after-load 'rspec-mode
+  '(rspec-install-snippets))
+
+(setq rspec-use-docker-when-possible t)
+
+(setq rspec-docker-container 'web)
+
+
+(use-package lsp-mode
+  :ensure t
+  :commands (lsp lsp-deferred)
+  :hook (go-mode . lsp-deferred))
+
+;; Set up before-save hooks to format buffer and add/delete imports.
+;; Make sure you don't have other gofmt/goimports hooks enabled.
+(defun lsp-go-install-save-hooks ()
+  (add-hook 'before-save-hook #'lsp-format-buffer t t)
+  (add-hook 'before-save-hook #'lsp-organize-imports t t))
+(add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
+
+;; Optional - provides fancier overlays.
+(use-package lsp-ui
+  :ensure t
+  :commands lsp-ui-mode)
+
+;; Company mode is a standard completion package that works well with lsp-mode.
+(use-package company
+  :ensure t
+  :config
+  ;; Optionally enable completion-as-you-type behavior.
+  (setq company-idle-delay 0)
+  (setq company-minimum-prefix-length 1))
+
+;; company-lsp integrates company mode completion with lsp-mode.
+;; completion-at-point also works out of the box but doesn't support snippets.
+(use-package company-lsp
+  :ensure t
+  :commands company-lsp)
+
+;; Optional - provides snippet support.
+(use-package yasnippet
+  :ensure t
+  :commands yas-minor-mode
+  :hook (go-mode . yas-minor-mode))
+
+(lsp-register-custom-settings
+ '(("gopls.completeUnimported" t t)
+   ("gopls.staticcheck" t t)))
+
+
+(require 'json)
+
+(defun my-get-stackoverflow-answers (query)
+  (interactive "sQuestion: ")
+  (let* ((question_ids
+          (with-current-buffer
+              (url-retrieve-synchronously
+               (concat "https://google.com/search?ie=utf-8&oe=utf-8&hl=en&as_qdr=all&q="
+                       (url-hexify-string (concat query " site:stackoverflow.com"))))
+            (let (ids)
+              (while (re-search-forward "https://stackoverflow.com/questions/\\([0-9]+\\)" nil t)
+                (push (match-string-no-properties 1) ids))
+              (setq ids (reverse ids))
+              (if (> (length ids) 5)
+                  (subseq ids 0 5)
+                ids))))
+
+         (url_template (format "https://api.stackexchange.com/2.2/questions/%s%%s?site=stackoverflow.com"
+                               (string-join question_ids ";")))
+
+         (questions (with-current-buffer                      
+                        (url-retrieve-synchronously
+                         (format url_template ""))
+                      (goto-char (point-min))
+                      (search-forward "\n\n")
+                      (append (assoc-default 'items (json-read)) nil)))
+
+         (answers (with-current-buffer
+                      (url-retrieve-synchronously
+                       (concat (format url_template "/answers")
+                               "&order=desc&sort=activity&filter=withbody"))
+                    (goto-char (point-min))
+                    (search-forward "\n\n")
+                    (sort (append (assoc-default 'items (json-read)) nil)
+                          (lambda (x y)
+                            (> (assoc-default 'score x)
+                               (assoc-default 'score y)))))))
+
+    (switch-to-buffer "*stackexchange*")
+    (erase-buffer)
+
+    (dolist (question_id (mapcar 'string-to-number question_ids))
+      (let ((question (some (lambda (question)
+                              (if (equal (assoc-default 'question_id question)
+                                         question_id)
+                                  question))
+                            questions)))
+        (insert "<hr><h2 style='background-color:paleturquoise'>Question: "
+                (format "<a href='%s'>%s</a>"
+                        (assoc-default 'link question)
+                        (assoc-default 'title question))
+                "</h2>"
+                "\n"
+                (mapconcat
+                 'identity
+                 (let ((rendered
+                        (remove-if
+                         'null
+                         (mapcar (lambda (answer)
+                                   (if (and (equal question_id
+                                                   (assoc-default 'question_id answer))
+                                            (>= (assoc-default 'score answer) 0))
+                                       (concat "<hr><h2 style='background-color:"
+                                               "#c1ffc1'>Answer - score: "
+                                               (number-to-string (assoc-default 'score answer))
+                                               "</h2>"
+                                               (assoc-default 'body answer))))
+                                 answers))))
+                   (if (> (length rendered) 5)
+                       (append (subseq rendered 0 5)
+                               (list (format "<br><br><a href='%s'>%s</a>"
+                                             (assoc-default 'link question)
+                                             "More answers...")))
+                     rendered))
+                 "\n")
+                )))
+    (shr-render-region (point-min) (point-max))
+    (goto-char (point-min))
+    (save-excursion
+      (while (search-forward "^M" nil t)
+        (replace-match "")))))
+
+(require 'helm-net)
+
+(defun my-helm-stackoverflow-lookup ()
+  (interactive)
+  ;; set debug-on-error to swallow potential network errors
+  ;; idea taken from: https://blog.johnregner.com/post/78877988910/fixing-helm-spotify#_=_
+  (let ((debug-on-error t)
+        (helm-google-suggest-actions '(("Stackoverflow" . my-get-stackoverflow-answers))))
+    (helm-google-suggest)))
+
+(require 'docker-compose-mode)
